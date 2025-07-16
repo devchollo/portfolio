@@ -28,17 +28,10 @@ aside {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* Glassmorphism effect */
     background: rgba(255, 255, 255, 0.15);
-    /* semi-transparent white */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    /* soft shadow */
     backdrop-filter: blur(10px);
-    /* blur the background */
     -webkit-backdrop-filter: blur(10px);
-    /* Safari support */
-   /* border: 1px solid rgba(255, 255, 255, 0.1); */
-    /* subtle border */
     border-radius: 8px;
     color: rgb(231, 229, 229);
 }
