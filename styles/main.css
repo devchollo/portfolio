@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Offside", sans-serif;
+}
+
+header {
+    width: 90%;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+aside {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Glassmorphism effect */
+    background: rgba(255, 255, 255, 0.15);
+    /* semi-transparent white */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* soft shadow */
+    backdrop-filter: blur(10px);
+    /* blur the background */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+   /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    /* subtle border */
+    border-radius: 8px;
+    color: rgb(231, 229, 229);
+}
+
+.logo {
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.nav-container nav ul {
+    display: flex;
+    column-gap: 20px;
+    padding: 10px 50px;
+}
+
+.nav-container nav ul li {
+    list-style: none;
+    padding: 10px 13px;
+    cursor: pointer;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen */
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
