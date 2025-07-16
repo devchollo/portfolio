@@ -13,6 +13,12 @@
       href="https://fonts.googleapis.com/css2?family=Offside&display=swap"
       rel="stylesheet"
     />
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
   </head>
   <body>
     <header>
@@ -118,7 +124,7 @@
           Your browser does not support the video tag.
         </video>
         <!-- first section container -->
-        <div class="first-section">
+       <!-- <div class="first-section">
           <div class="hero">
             <h1>
               Your Friendly Cebu Web Developer – Custom Sites, Fixes, and Tech
@@ -141,10 +147,92 @@
               >
             </div>
           </div>
-          <div class="s1-rotating-banner">Rotating banner here</div>
+          <div class="s1-rotating-banner">
+            ROTATING BANNER HERE
+          </div>
+        </div> -->
+      
+      <!-- Swiper -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper" style="width: 100%;">
+    <!-- Slide 1: Your Content -->
+    <div class="swiper-slide">
+      <div class="first-section">
+        <div class="hero">
+          <h1>
+            Your Friendly Cebu Web Developer – Custom Sites, Fixes, and Tech
+            Solutions
+          </h1>
+          <span class="sub-heading">
+            Helping businesses and individuals build fast, modern websites
+            with reliable tech support – from custom development to smart
+            updates, all done with a personal touch.
+          </span>
+          <div class="contact-block">
+            <a
+              href="mailto:info@ksevillejo.com"
+              class="shine tooltip-container"
+              >info@ksevillejo.com</a
+            >
+            <a
+              href="tel:+639959625392"
+              class="shine tooltip-container"
+              >09959625392</a
+            >
+          </div>
         </div>
+        <div class="s1-rotating-banner">ROTATING BANNER HERE</div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="swiper-slide">
+      <div class="first-section">
+        <h1>Slide 2 Title</h1>
+        <p>Second slide content goes here.</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="swiper-slide">
+      <div class="first-section">
+        <h1>Slide 3 Title</h1>
+        <p>Third slide content goes here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation buttons -->
+  <div class="swiper-button-next" style="position: absolute; right: 100px; top: 90%;"></div>
+  <div class="swiper-button-prev" style="position: absolute; left: calc(100% - 180px); top: 90%;"></div>
+
+  <!-- Pagination dots -->
+  <div class="swiper-pagination"></div>
+</div>
       </div>
     </main>
     <footer></footer>
+
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 5000,
+    },
+  });
+</script>
+
   </body>
 </html>
