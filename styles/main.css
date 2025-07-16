@@ -18,7 +18,9 @@ header {
   transform: translateX(-50%);
   z-index: 1;
 }
-
+.header-fixed {
+  position: fixed;
+}
 aside {
   position: absolute;
   top: 50%;
@@ -32,7 +34,16 @@ aside {
   align-items: center;
   justify-content: space-between;
 }
-
+.header-bg-active {
+  background: rgba(0, 0, 0, 0.32);
+  color: #fff;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  z-index: 10;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
 .card {
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -40,6 +51,7 @@ aside {
   -webkit-backdrop-filter: blur(10px);
   border-radius: 8px;
   color: rgb(231, 229, 229);
+  transition: all 0.3s ease-in-out;
 }
 
 .logo {
@@ -237,6 +249,11 @@ main {
 
 .nav-container:hover {
   transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+}
+
+.disable-hover:hover .nav-container{
+  transform: scale(1);
 }
 
 header{

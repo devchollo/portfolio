@@ -155,7 +155,7 @@
       <!-- Swiper -->
 <div class="swiper mySwiper">
   <div class="swiper-wrapper" style="width: 100%;">
-    <!-- Slide 1: Your Content -->
+    <!-- Slide 1 -->
     <div class="swiper-slide">
       <div class="first-section">
         <div class="hero">
@@ -210,6 +210,9 @@
   <div class="swiper-pagination"></div>
 </div>
       </div>
+      <div class="second-section" style="min-height: 100vh;">
+
+      </div>
     </main>
     <footer></footer>
 
@@ -229,9 +232,44 @@
       prevEl: ".swiper-button-prev",
     },
     autoplay: {
-      delay: 5000,
+      delay: 10000,
     },
   });
+
+
+  // FOR THE HEADER
+
+   document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header");
+    const secondSection = document.querySelector(".second-section");
+
+    window.addEventListener("scroll", () => {
+      const headerBottom = header.getBoundingClientRect().bottom;
+      const sectionTop = secondSection.getBoundingClientRect().top;
+
+      if (headerBottom >= sectionTop) {
+        header.classList.add("header-bg-active");
+        header.style.position("fixed");
+      } else {
+        header.classList.remove("header-bg-active");
+      }
+    });
+
+    const firstSection = document.querySelector(".first-section");
+
+    window.addEventListener("scroll", () => {
+      const sectionBottom = firstSection.getBoundingClientRect().bottom;
+
+      if (sectionBottom <= 0) {
+        header.classList.add("header-fixed");
+        header.classList.add("header-fixed", "disable-hover");
+      } else {
+        header.classList.remove("header-fixed");
+        header.classList.remove("header-fixed", "disable-hover");
+      }
+    });
+  });
+
 </script>
 
   </body>
