@@ -57,6 +57,7 @@ aside {
 .logo {
   margin-left: 50px;
   cursor: pointer;
+  color: #facc15;
 }
 
 .nav-container nav ul {
@@ -74,7 +75,6 @@ aside {
 }
 .nav-container nav ul li:hover,
 .nav-container .logo:hover {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
   transform: scale(1.02);
   transition: all 0.2s ease-in;
   color: #facc15;
@@ -94,9 +94,9 @@ aside {
 }
 .text-hover,
 .active {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
   transform: scale(1.02);
   transition: all 0.2s ease-in;
+  color: #facc15;
 }
 
 main {
